@@ -1,0 +1,29 @@
+<h1>Listing diemtrentuyens</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Matuyen</th>
+    <th>Vido</th>
+    <th>Kinhdo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @diemtrentuyens.each do |diemtrentuyen| %>
+  <tr>
+    <td><%= diemtrentuyen.id %></td>
+    <td><%= diemtrentuyen.matuyen %></td>
+    <td><%= diemtrentuyen.vido %></td>
+    <td><%= diemtrentuyen.kinhdo %></td>
+    <td><%= link_to 'Show', diemtrentuyen %></td>
+    <td><%= link_to 'Edit', edit_diemtrentuyen_path(diemtrentuyen) %></td>
+    <td><%= link_to 'Destroy', diemtrentuyen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Diemtrentuyen', new_diemtrentuyen_path %>
